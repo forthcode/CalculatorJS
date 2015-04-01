@@ -1,54 +1,75 @@
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>CaculatorJS:Caculator By JavaScript</title>
-<link href="css/main.css" rel="stylesheet" type="text/css">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>CaculatorJS:Caculator By JavaScript</title>
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/app.js"></script>
 </head>
 <body>
 	<div id="continer">
 		<div id="screen">
-			<div id="screenup"><p>123+456=</p></div>
-			<div id="screendown"><p>579</p></div>
+			<div id="screenup"><p><b>CaculatorJS</b></p></div>
+			<div id="screendown"><p id="message">0</p></div>
 		</div>
 		
 		
 		<div id="keyboard">
 			
 			<div id=colLeft>
-				<div id="row1" class="keyrow">
-					<button id="keyC" class="key" value="C"><p>C</p></button>
-					<button id="keyDel" class="key" value="DEL"><p>DEL</p></button>
-					<button id="keyDiv" class="key" value="/"><p>÷</p></button>
+			<div id="row1" class="keyrow">
+				<button id="keyC" class="key"><p>C</p></button>
+				<button id="keyDel" class="key"><p>DEL</p></button>
+				<button id="keyDiv" class="key"><p>÷</p></button>
+
+			</div>
+			<div id="row2" class="keyrow">
+				<button id="key7" class="key"><p>7</p></button>
+				<button id="key8" class="key"><p>8</p></button>
+				<button id="key9" class="key"><p>9</p></button>
+
+
 				</div>
-				<div id="row2" class="keyrow">
-					<button id="key7" class="key" value="7"><p>7</p></button>
-					<button id="key8" class="key" value="8"><p>8</p></button>
-					<button id="key9" class="key" value="9"><p>9</p></button>
-				</div>
-				<div id="row3" class="keyrow">
-					<button id="key4" class="key" value="4"><p>4</p></button>
-					<button id="key5" class="key" value="5"><p>5</p></button>
-					<button id="key6" class="key" value="6"><p>6</p></button>
-				</div>
-				<div id="row4" class="keyrow">
-					<button id="key1" class="key" value="1"><p>1</p></button>
-					<button id="key2" class="key" value="2"><p>2</p></button>
-					<button id="key3" class="key" value="3"><p>3</p></button>
-				</div>
-				<div id="row5" class="keyrow">
-					<button id="key0" class="key" value="0"><p>0</p></button>
-					<button id="keyPoint" class="key" value="."><p>.</p></button>
-				</div>	
+			<div id="row3" class="keyrow">
+				<button id="key4" class="key"><p>4</p></button>
+				<button id="key5" class="key"><p>5</p></button>
+				<button id="key6" class="key"><p>6</p></button>
+				
+
+			</div>
+			<div id="row4" class="keyrow">
+				<button id="key1" class="key"><p>1</p></button>
+				<button id="key2" class="key"><p>2</p></button>
+				<button id="key3" class="key"><p>3</p></button>
+				
+			</div>
+			<div id="row5" class="keyrow">
+				<button id="key0" class="key"><p>0</p></button>
+				<button id="keyPoint" class="key"><p>.</p></button>
+			</div>
+			
 			</div>
 			
 			<div id=colRight>
-				<button id="keyMul" class="key" value="*"><p>×</p></button>
-				<button id="keyMinus" class="key" value="-"><p>－</p></button>
-				<button id="keyPlus" class="key" value="+" onclick=""><p>＋</p></button>
-				<button id="keyEqual" class="key" value="=" onclick="计算"><p>＝</p></button>
+				<button id="keyMul" class="key"><p>×</p></button>
+				<button id="keyMinus" class="key"><p>－</p></button>
+				<button id="keyPlus" class="key"><p>＋</p></button>
+				<button id="keyEqual" class="key"><p>＝</p></button>
 			</div>
+		
+		
+	
 		</div>
-	</div>	
-	<div id="version"><p>CaculatorJS  v0.2.3_alpha</p></div>
+		
+
+	
+	
+	
+	
+	
+	</div>
+	
+	<div id="version"><p>CaculatorJS  v1.1.0a</p></div>
+	
 </body>
 </html>

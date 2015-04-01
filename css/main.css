@@ -116,10 +116,11 @@ margin:90px 5px 0px 0px;
 #version{
 
 width:360px;
-height:20px;
+height:40px;
 margin:auto;
 
 }
+
 
 #version p{
 padding:10px 0px;
@@ -128,6 +129,27 @@ font-family:Times;
 color:#ffffff;
 float:right;
 }
+
+#about{
+width:470px;
+height:40px;
+margin:auto;
+}
+
+#about a{
+padding:10px 0px 0px 10px;
+margin:0;
+font-family:Microsoft YaHei;
+font-weight:bold;
+font-size:18px;
+color:#ffffff;
+}
+
+#about a:hover{
+
+color:#ff7f3f;
+}
+
 
 
 .key{

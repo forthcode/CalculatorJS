@@ -152,6 +152,41 @@ $(function(){
 		currentText=currentText+'9';
 		$('#message').text(currentText);
 	})
+	$('#keyPoint').on('click',function(){
+
+
+		if (currentText!=''&&temp==''&&operator==''&&equal!='') {
+
+			equal='';
+			currentText='.';
+			operator='';
+			$('#message').text(currentText);
+			currentText='';
+		}
+
+		currentText=currentText+'.';
+		$('#message').text(currentText);
+	})
+	$('#keyNeg').on('click',function(){
+		if (currentText=='0') {
+			currentText='';
+		}
+		else if(currentText<0){
+			return 0;
+		}
+
+		if (currentText!=''&&temp==''&&operator==''&&equal!='') {
+
+			equal='';
+			currentText='-';
+			operator='';
+			$('#message').text(currentText);
+			currentText='';
+		}
+
+		currentText=currentText+'-';
+		$('#message').text(currentText);
+	})
 	$('#keyC').on('click',function(){
 		equal='';
 		temp='';
@@ -232,8 +267,8 @@ $(function(){
 
 	function calculate(n1,n2,operator){
 		var result;
-		n1 = parseInt(n1);
-		n2 = parseInt(n2);
+		n1 = parseFloat(n1);
+		n2 = parseFloat(n2);
 		switch (operator){
 			case '+':
 				result=n1+n2;
@@ -251,11 +286,28 @@ $(function(){
 				return;
 				break;
 		}
-		currentText = result;
+		
+		var resultInt=parseInt(result);
+		var resultDec=(result-resultInt).toPrecision(3);
+		var resultPrint;	
+		if(resultDec==0){
+			resultPrint = resultInt;
+			}
+		else {	
+			resultPrint = parseFloat(parseInt(resultInt)+parseFloat(resultDec));	
+			
+		}
+				
+			
+		if(resultPrint>=1000000000||resultPrint<=-1000000000)
+			resultPrint = "Overflow";
+	
+	
+		currentText = resultPrint;
 		temp='';
 
 
-		return result;
+		return resultPrint;
 
 	}
 

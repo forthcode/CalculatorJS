@@ -242,7 +242,7 @@ $(function(){
 			    result=n1-n2;
 			    break;
 			case '*':
-			    result=nu*n2;
+			    result=n1*n2;
 			    break;
             case '/':
 			    result=n1/n2;
